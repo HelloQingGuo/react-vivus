@@ -1,5 +1,4 @@
 .App {
-  color: white;
   display: flex;
   height: 100vh;
   min-height: 400px;
@@ -11,12 +10,25 @@
 
 .App-header {
   margin: auto;
+  letter-spacing: 1px;
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 1.6em;
+  margin-top: 50px;
+  color: #fff;
 }
 
-.App-intro {
-  font-size: large;
+.App-title a {
+  text-decoration: none;
+  color: lightblue;
+}
+
+.App-title a:hover {
+  text-decoration: underline;
+}
+
+.App-subtitle {
+  font-size: 0.8em;
+  color: #fff;
 }

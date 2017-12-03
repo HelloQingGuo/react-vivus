@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactVivus from 'react-vivus';
-import svg from './example.svg';
+import svg from './hi.svg';
 import './App.css';
 
 class App extends Component {
@@ -14,12 +14,23 @@ class App extends Component {
               file: svg,
               animTimingFunction: 'EASE',
               type: 'oneByOne',
-              onReady: console.log,
+              duration: 250,
+              onReady: console.log
             }}
-            style={{ height: '140px', width: '150px', margin: '24px auto' }}
+            style={{
+              margin: 'auto'
+            }}
             callback={console.log}
           />
-          <h1 className="App-title">Welcome to React Vivus</h1>
+          <h1 className="App-title">
+            Welcome to{' '}
+            <a href="https://github.com/HelloQingGuo/react-vivus">
+              React Vivus
+            </a>
+          </h1>
+          <p className="App-subtitle">
+            Static SVG resource is from https://maxwellito.github.io/vivus/
+          </p>
         </header>
       </div>
     );
