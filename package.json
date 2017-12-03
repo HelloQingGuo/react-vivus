@@ -1,0 +1,32 @@
+{
+  "name": "react-vivus",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "scripts": {
+    "watch": "cross-env NODE_ENV=development webpack -w",
+    "build:dev": "cross-env NODE_ENV=development webpack",
+    "build:production": "cross-env NODE_ENV=production webpack -p"
+  },
+  "keywords": ["React Vivus", "react", "vivus", "react.js", "vivus.js"],
+  "repository": "git@github.com:HelloQingGuo/react-vivus.git",
+  "author": "Qing Guo",
+  "license": "MIT",
+  "peerDependency": {
+    "vivus": "^0.4.3",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "cross-env": "^4.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "webpack": "2.7.0"
+  },
+  "dependencies": {
+    "vivus": "^0.4.3"
+  }
+}
