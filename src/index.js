@@ -1,79 +1,64 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Vivus from 'vivus';
 
-class ReactVivus extends Component {
-  constructor(props) {
-    super(props);
+const builtInAnimTimingFunction = {
+  EASE: Vivus.EASE,
+  EASE_IN: Vivus.EASE_IN,
+  EASE_OUT: Vivus.EASE_OUT,
+  EASE_OUT_BOUNCE: Vivus.EASE_OUT_BOUNCE,
+};
 
-    this.state = {
-      builtInAnimTimingFunction: {
-        EASE: Vivus.EASE,
-        EASE_IN: Vivus.EASE_IN,
-        EASE_OUT: Vivus.EASE_OUT,
-        EASE_OUT_BOUNCE: Vivus.EASE_OUT_BOUNCE
-      }
-    };
-  }
-
+class ReactVivus extends PureComponent {
   componentDidMount() {
-    const {
-      file,
-      callback,
-      duration,
-      type,
-      reverseStack,
-      animTimingFunction
-    } = this.props;
-    const { builtInAnimTimingFunction } = this.state;
-    new Vivus(
-      this.props.id,
-      {
-        duration,
-        file,
-        type,
-        reverseStack,
-        animTimingFunction: builtInAnimTimingFunction[animTimingFunction]
-      },
-      callback
-    );
+    const { id, option, callback } = this.props;
+    let combinedOption = option;
+    if (option.animTimingFunction) {
+      combinedOption = {
+        ...combinedOption,
+        animTimingFunction: builtInAnimTimingFunction[option.animTimingFunction],
+      };
+    }
+    if (option.pathTimingFunction) {
+      combinedOption = {
+        ...combinedOption,
+        pathTimingFunction: builtInAnimTimingFunction[option.pathTimingFunction],
+      };
+    }
+    new Vivus(id, combinedOption, callback);
   }
 
   render() {
-    const { id, style, height, width, className, type } = this.props;
-    return (
-      <div
-        id={id}
-        className={className}
-        style={Object.assign(style || {}, { height, width })}
-        type={type}
-      />
-    );
+    const { id, style, className } = this.props;
+    return <div id={id} className={className} style={style} />;
   }
 }
 
 ReactVivus.defaultProps = {
-  duration: 200,
-  type: 'delayed',
-  callback: null,
-  animTimingFunction: 'EASE', // EASE, EASE_IN, EASE_OUT and EASE_OUT_BOUNCE
-  reverseStack: false,
   className: '',
-  style: undefined
+  style: {},
+  callback: undefined,
 };
 
 ReactVivus.propTypes = {
   id: PropTypes.string.isRequired,
-  height: PropTypes.string.isRequired,
-  width: PropTypes.string.isRequired,
-  file: PropTypes.string.isRequired,
+  option: PropTypes.shape({
+    type: PropTypes.string,
+    file: PropTypes.string.isRequired,
+    start: PropTypes.string,
+    duration: PropTypes.number,
+    delay: PropTypes.number,
+    onReady: PropTypes.func,
+    pathTimingFunction: PropTypes.string,
+    animTimingFunction: PropTypes.string,
+    dashGap: PropTypes.number,
+    forceRender: PropTypes.bool,
+    reverseStack: PropTypes.bool,
+    selfDestroy: PropTypes.bool,
+  }).isRequired,
+  className: PropTypes.string,
   style: PropTypes.shape({}),
   callback: PropTypes.func,
-  duration: PropTypes.number,
-  className: PropTypes.string,
-  type: PropTypes.string,
-  reverseStack: PropTypes.bool,
-  animTimingFunction: PropTypes.string
 };
 
 export default ReactVivus;
