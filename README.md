@@ -17,19 +17,16 @@ import React from 'react';
 import ReactVivus from 'react-vivus';
 import svg from './example.svg';
 
-const MyComponent = () => {
-	return (
-		<ReactVivus
-			id="logo"
-			width="100px"
-			height="100px"
-			file={svg}
-			animTimingFunction="EASE"
-			type="oneByOne"
-		/>
-	);
-};
-
+const MyComponent = () => (
+  <ReactVivus
+    id="logo"
+    width="100px"
+    height="100px"
+    file={svg}
+    animTimingFunction="EASE"
+    type="oneByOne"
+  />
+);
 export default MyComponent;
 
 ```
