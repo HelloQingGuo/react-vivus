@@ -13,7 +13,7 @@ To install this Component, run `yarn add react-vivus` or `npm install react-vivu
 
 ## Usage
 
-To use the component, In your react Application just do
+To use the component, In your react application just do
 
 ```javascript
 import React from 'react';
@@ -22,7 +22,7 @@ import svg from './example.svg';
 
 const MyComponent = () => (
   <ReactVivus
-    id="logo"
+    id="foo"
     option={{
       file: svg,
       animTimingFunction: 'EASE',

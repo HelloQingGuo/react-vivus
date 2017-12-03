@@ -1,0 +1,22 @@
+.App {
+  color: white;
+  display: flex;
+  height: 100vh;
+  min-height: 400px;
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: #22292c;
+}
+
+.App-header {
+  margin: auto;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
