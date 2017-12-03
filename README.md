@@ -1,4 +1,7 @@
 # React Vivus
+[![NPM version](https://badge.fury.io/js/react-vivus.svg)](https://www.npmjs.com/package/react-vivus)
+
+[![NPM version](https://img.shields.io/badge/LICENSE-MIT-blue.svg)](https://www.npmjs.com/package/react-vivus)
 
 This react component allows you to make drawing animation on SVG.
 
