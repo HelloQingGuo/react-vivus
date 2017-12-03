@@ -7,7 +7,9 @@ This react component allows you to make drawing animation on SVG.
 
 This component makes use of [vivus.js](https://github.com/maxwellito/vivus) plugin.
 
-![React Vivus Example Gif](docs/hi.gif "React Vivus Example Gif")
+<p style="text-align: center">
+  <img src="docs/hi.gif"  width="400" title="React Vivus Example Gif" alt="React Vivus Example Gif" />
+</p>
 
 ## Installation
 
