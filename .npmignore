@@ -3,5 +3,7 @@ node_modules
 src
 webpack.config.js
 .babelrc
+.eslintrc
+.eslintignore
 .gitignore
 yarn.lock
