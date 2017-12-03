@@ -20,21 +20,18 @@ import svg from './example.svg';
 const MyComponent = () => (
   <ReactVivus
     id="logo"
-    width="100px"
-    height="100px"
-    file={svg}
-    animTimingFunction="EASE"
-    type="oneByOne"
+    option={{
+      file: svg,
+      animTimingFunction: 'EASE',
+      type: 'oneByOne',
+      onReady: console.log
+    }}
+    style={{ height: '100px', width: '100px' }}
+    callback={console.log}
   />
 );
 export default MyComponent;
 
-```
-
-You can also provide additional configuration like
-
-```javascript
-TODO
 ```
 
 You can view all the different options to create a custom animation to draw your SVG in whatever way you like here https://github.com/maxwellito/vivus#option-list
