@@ -13,11 +13,11 @@ This component makes use of [vivus.js](https://github.com/maxwellito/vivus) plug
 
 ## Installation
 
-To install this Component, run `yarn add react-vivus` or `npm install react-vivus --save`, Don't forget to install vivus by running `yarn add vivus` or `npm install vivus --save`.
+To install this component, run `yarn add react-vivus` or `npm install react-vivus --save`, Don't forget to install vivus by running `yarn add vivus` or `npm install vivus --save`.
 
 ## Usage
 
-To use the component, In your react application just do
+To use the component, in your react application just do
 
 ```javascript
 import React from 'react';
@@ -40,5 +40,8 @@ const MyComponent = () => (
 export default MyComponent;
 
 ```
+
+[Click here to download the sample svg]('docs/hi.gif')
+
 
 You can view all the different options to create a custom animation to draw your SVG in whatever way you like here https://github.com/maxwellito/vivus#option-list
