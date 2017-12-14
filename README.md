@@ -41,7 +41,7 @@ export default MyComponent;
 
 ```
 
-[Click here to download the sample svg](docs/hi.gif)
+[Click here to download the sample svg](docs/src/hi.svg)
 
 
 You can view all the different options to create a custom animation to draw your SVG in whatever way you like here https://github.com/maxwellito/vivus#option-list
