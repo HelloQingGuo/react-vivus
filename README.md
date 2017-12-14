@@ -22,18 +22,19 @@ To use the component, in your react application just do
 ```javascript
 import React from 'react';
 import ReactVivus from 'react-vivus';
-import svg from './example.svg';
+import svg from './hi.svg';
 
 const MyComponent = () => (
   <ReactVivus
     id="foo"
     option={{
       file: svg,
-      animTimingFunction: 'EASE',
       type: 'oneByOne',
+      animTimingFunction: 'EASE',
+      duration: 250,
       onReady: console.log
     }}
-    style={{ height: '100px', width: '100px' }}
+    style={{ height: '300px', width: '250px' }}
     callback={console.log}
   />
 );
